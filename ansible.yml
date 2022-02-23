@@ -1,0 +1,27 @@
+---
+- name: Run Prometheus on K8s
+  hosts: root
+
+  tasks:
+     - name: minikube start
+       shell: minikube start
+
+     - name: apply crds
+       shell: kubectl apply -f /home/ubuntu/Desktop/monitoring-stack/crds/
+     
+     - name: deploy prometheus-operator
+       shell: kubectl apply -f /home/ubuntu/Desktop/monitoring-stack/prometheus-operator/
+
+     - name: deploy prometheus
+       shell: kubectl apply -f /home/ubuntu/Desktop/monitoring-stack/prometheus/
+
+     - name: deploy alermanager
+       shell: kubectl apply -f /home/ubuntu/Desktop/monitoring-stack/alertmanager/
+
+     - name: deploy grafana
+       shell: kubectl apply -f /home/ubuntu/Desktop/monitoring-stack/grafana/
+
+     - name: deploy node-exporter
+       shell: kubectl apply -f /home/ubuntu/Desktop/monitoring-stack/node-exporter/  
+
+ 
