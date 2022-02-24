@@ -22,6 +22,11 @@
        shell: kubectl apply -f /home/ubuntu/Desktop/monitoring-stack/grafana/
 
      - name: deploy node-exporter
-       shell: kubectl apply -f /home/ubuntu/Desktop/monitoring-stack/node-exporter/  
+       shell: kubectl apply -f /home/ubuntu/Desktop/monitoring-stack/node-exporter/
+     
+     - name: deploy kube-state-metrics
+       shell: kubectl apply -f /home/ubuntu/Desktop/monitoring-stack/kube-state-metrics/
+
+       
 
  
