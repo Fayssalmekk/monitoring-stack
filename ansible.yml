@@ -1,6 +1,6 @@
 ---
 - name: Run Prometheus on K8s
-  hosts: root
+  hosts: all
 
   tasks:
 
