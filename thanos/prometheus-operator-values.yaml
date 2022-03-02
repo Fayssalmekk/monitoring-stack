@@ -11,7 +11,7 @@ prometheus:
     thanos:         # add Thanos Sidecar
       tag: v0.13.0   # a specific version of Thanos
       objectStorageConfig: # blob storage configuration to upload metrics 
-        key: thanos.yaml
+        key: thanos-storage-config.yaml
         name: thanos-objstore-config
 alertmanager:
   enabled: true

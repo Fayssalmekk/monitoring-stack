@@ -82,9 +82,10 @@ metadata:
   namespace: monitoring 
 data:
   thanos-store.yml: |-
-    type: AZURE
-    config:
-      storage_account: "<account_name>"
-      storage_account_key: "<access_key>"
-      container: "thanos"
-      max_retries: 0
+    type: s3
+      config:
+        access_key: AKIAYPIWJPWJ4A3AZVWD
+        access_secret: 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
+        region: eu-west-3
+        bucket: fayssal-bucket-thanos 
+       

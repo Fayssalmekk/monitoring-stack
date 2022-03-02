@@ -1,0 +1,7 @@
+type: s3
+config:
+  access_key: AKIAYPIWJPWJ4A3AZVWD
+  access_secret: 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
+  region: eu-west-3
+  bucket: fayssal-bucket-thanos #S3 bucket name
+  encryptsse: true
